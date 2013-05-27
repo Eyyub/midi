@@ -24,10 +24,13 @@ def getMidiFile(filename):
 parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, 
 description=textwrap.dedent("""\
 							Utilitaire permettant de transformer un fichier MIDI d'un format a une autre, 
-							les formats supportes sont : .mid ou .midi, .xml, .json, .txt. \n 
-							Vous pouvez donc transformer vos donnees MIDI en un autre format, que ce soit de .mid a .json, mais aussi de .xml a .json si le .xml contient des donnees valides. \n 
+							les formats supportes sont : .mid ou .midi, .xml, .json, .txt. \n
+							Usage : python main.py -f test.ext -to test.ext2
+							.ext et .ext2 peuvent être : .mid, .midi, .txt, .json, .xml
+							Vous pouvez donc transformer vos donnees MIDI en un autre format et l'inverse. \n 
 							Exemples d'utilisation : 
-							    python main.py -f test.mid -to test.xml \n 
+							    python main.py -f test.mid -to test.xml \n
+							    python main.py -f test.txt -to test_txt.mid \n
 							    python main.py -f test.xml -to test.json"""))
 parser.add_argument('-f')
 parser.add_argument('-to')
